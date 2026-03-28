@@ -15,7 +15,7 @@ Centralized search platform for Israeli vinyl record market with automated web s
 
 - **Backend**: FastAPI (Python) + PostgreSQL + Redis
 - **Frontend**: React + Vite
-- **Hosting**: Railway (backend) + Vercel (frontend)
+- **Hosting**: Railway (backend) + Netlify (frontend) [or Vercel]
 - **Scraping**: BeautifulSoup + Requests
 - **Scheduling**: APScheduler
 
@@ -200,6 +200,39 @@ This tool respects robots.txt and implements rate limiting to avoid overloading 
 - [ ] Price history & trend charts
 - [ ] Email alerts for price drops
 - [ ] Advanced filtering & faceted search
+
+## 🚀 Production Deployment
+
+### Quick Start - Netlify (Frontend)
+
+**Fastest method (3 minutes):**
+1. `cd frontend && npm install && npm run build`
+2. Go to https://app.netlify.com/drop
+3. Drag `frontend/dist/` folder
+4. Done! Your site is live.
+
+See [NETLIFY_QUICK_START.md](NETLIFY_QUICK_START.md) for detailed guide.
+
+### Railway (Backend)
+
+```bash
+cd backend
+railway login
+railway up
+```
+
+See [PRODUCTION_DEPLOYMENT_NOW.md](PRODUCTION_DEPLOYMENT_NOW.md) for full deployment guide.
+
+### Alternative: GitHub + Auto-Deploy
+
+Connect your GitHub repo to Netlify for automatic deploys on every commit:
+1. Go to https://app.netlify.com
+2. Click "Import from Git"
+3. Select `roeigold2002/vinyl-aggregator`
+4. Set base directory: `frontend`
+5. Deploy!
+
+**Cost**: $0/month (free tiers for both Railway and Netlify)
 
 ## Contributing
 
