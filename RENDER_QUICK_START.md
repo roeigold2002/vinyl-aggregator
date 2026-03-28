@@ -28,12 +28,18 @@ Uses:
 2. Select repository: `roeigold2002/vinyl-aggregator`
 3. Configure:
    - **Name**: `vinyl-aggregator-backend`
-   - **Root Directory**: `backend`
+   - **Root Directory**: `backend` (Important!)
    - **Runtime**: Python 3
    - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port 8000`
+   - **Start Command**: Leave blank (uses Procfile automatically)
    - **Instance Type**: **Free**
 4. Click **"Create Web Service"**
+
+**If build fails with "requirements.txt not found":**
+- Render sometimes has issues with root directory
+- Alternative: Don't set root directory, instead:
+  - Build Command: `cd backend && pip install -r requirements.txt`
+  - Start Command: `cd backend && uvicorn main:app --host 0.0.0.0 --port 8000`
 
 ### Wait for Build (5 minutes)
 - Render pulls code from GitHub
