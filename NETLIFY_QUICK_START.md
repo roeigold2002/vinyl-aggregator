@@ -29,15 +29,25 @@ Example: `https://vinyl-aggregator-xxxx.netlify.app`
 
 ## Step 3: Configure Backend (1 minute)
 
-Your frontend needs to know where the backend is:
+Your frontend needs to know where the backend is. Choose a backend option:
 
-1. Go to your Netlify site dashboard
-2. Click **"Site Settings"** → **"Build & Deploy"** → **"Environment"**
-3. Click **"Edit variables"**
-4. Add new variable:
-   - **Key**: `VITE_API_URL`
-   - **Value**: `https://your-railway-backend.railway.app`
-5. Trigger redeploy: Click **"Trigger Deploy"** → **"Deploy site"**
+### Option A: Render.com (Recommended - Permanently Free)
+1. Go to https://render.com
+2. Deploy `backend/` folder (free tier, no credit card needed)
+3. Copy your Render URL: `https://your-app.onrender.com`
+4. Configure in Netlify:
+   - Go to your Netlify site dashboard
+   - Click **"Site Settings"** → **"Build & Deploy"** → **"Environment"**
+   - Add: `VITE_API_URL=https://your-app.onrender.com`
+   - Trigger redeploy
+
+### Option B: Railway (After Free 30 Days)
+- First 30 days: Free
+- After: $5/month minimum
+- Use only if you're committed to paying
+
+### Option C: Heroku Alternative
+- Replit, Fly.io, or other free options available
 
 ---
 

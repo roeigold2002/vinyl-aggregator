@@ -15,7 +15,7 @@ Centralized search platform for Israeli vinyl record market with automated web s
 
 - **Backend**: FastAPI (Python) + PostgreSQL + Redis
 - **Frontend**: React + Vite
-- **Hosting**: Railway (backend) + Netlify (frontend) [or Vercel]
+- **Hosting**: Render (backend, permanently free) + Netlify (frontend, permanently free)
 - **Scraping**: BeautifulSoup + Requests
 - **Scheduling**: APScheduler
 
